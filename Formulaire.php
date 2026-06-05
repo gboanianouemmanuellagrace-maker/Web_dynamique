@@ -7,7 +7,7 @@
         $nom_base = "if0_42103233_esssaibdd"; 
         
         // À TOI DE JOUER : Colle ton mot de passe d'hébergement secret entre les deux guillemets ci-dessous
-        $mot_de_passe = "METS_TON_MOT_DE_PASSE_ICI"; 
+        $mot_de_passe = "Manouelle24"; 
         // ----------------------------------------------
         
         $conn = new mysqli($serveur, $utilisateur, $mot_de_passe, $nom_base);
