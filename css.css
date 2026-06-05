@@ -1,0 +1,436 @@
+/* ========================================================
+   DESIGN CENTRALISÉ — STYLE BLISSIM E-COMMERCE PREMIUM
+   Épuré, Lumineux, Élégant et Professionnel
+   ======================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --bg-main: #fcfbfa;         /* Fond beige très clair, doux et chic */
+    --bg-card: #ffffff;         /* Blanc pur pour les cartes et conteneurs */
+    --text-dark: #111111;       /* Noir profond pour les titres */
+    --text-body: #444444;       /* Gris foncé pour le texte standard */
+    --text-muted: #777777;      /* Gris doux pour les labels */
+    --accent-pink: #de2b6d;     /* Rose "Soldes / Tendance" de Blissim */
+    --accent-dark: #232226;     /* Couleur des gros boutons principaux */
+    --border-color: #e8e6e1;    /* Lignes très fines et discrètes */
+    --shadow-soft: rgba(0, 0, 0, 0.04);
+}
+
+/* ── GLOBALS ────────────────────────────────────────── */
+body, .liste-vente-body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-body);
+    margin: 0;
+    padding: 0 0 50px 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── BARRE DE TOP NOTIFICATION (Comme sur l'image) ───── */
+.top-bar-promo {
+    background-color: #f7f3ee;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 8px 10px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border-color);
+}
+.top-bar-promo strong {
+    color: var(--accent-pink);
+    text-transform: uppercase;
+}
+
+/* ── EN-TÊTE ÉLÉGANT & LOGOS (HEADER) ────────────────── */
+.header {
+    background-color: var(--bg-card);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-dark);
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.text-right {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ── BANNIÈRE PRINCIPALE STYLE E-COMMERCE (NEW) ─────── */
+.hero-banner {
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #e5edf0; /* Fallback */
+    background-image: linear-gradient(to right, rgba(255,255,255,0.92) 40%, rgba(255,255,255,0) 80%), 
+                      url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    padding: 60px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
+}
+
+.hero-badge {
+    background-color: #fff200;
+    color: var(--text-dark);
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    align-self: flex-start;
+}
+
+.hero-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--text-dark);
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.hero-banner p {
+    font-size: 15px;
+    color: #555;
+    max-width: 500px;
+    margin: 0 0 25px 0;
+}
+
+/* ── GRILLE DE NAVIGATION STYLE RECHERCHE/PRODUIT ───── */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.plateforme-conteneur {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0;
+}
+
+.plateforme-conteneur li {
+    position: relative;
+}
+
+.plateforme-conteneur a {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 180px;
+    background-color: var(--bg-card);
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px var(--shadow-soft);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Injection d'images de fond spécifiques pour chaque menu */
+.plateforme-conteneur li:nth-child(1) a { background-image: linear-gradient(to top, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=400&q=80'); }
+.plateforme-conteneur li:nth-child(2) a { background-image: linear-gradient(to top, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=400&q=80'); }
+.plateforme-conteneur li:nth-child(3) a { background-image: linear-gradient(to top, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?auto=format&fit=crop&w=400&q=80'); }
+.plateforme-conteneur li:nth-child(4) a { background-image: linear-gradient(to top, rgba(0,0,0,0.6) 40%, rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=400&q=80'); color: white !important; border: none; }
+.plateforme-conteneur li:nth-child(5) a { background-image: linear-gradient(to top, rgba(255,255,255,0.95) 40%, rgba(255,255,255,0.2)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=400&q=80'); }
+
+.plateforme-conteneur a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    border-color: var(--text-dark);
+}
+
+/* Le bouton spécial Action de vente (Rose Blissim ou Noir contrasté) */
+.plateforme-conteneur .btn-action {
+    border-bottom: 3px solid var(--accent-pink) !important;
+}
+
+/* ── CONTENEURS STANDARDS FORMULAIRES & BOITES ───────── */
+.form-container, .facture-box {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px var(--shadow-soft);
+}
+
+.facture-box {
+    max-width: 900px;
+}
+
+.form-container h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 28px;
+    color: var(--text-dark);
+    margin-bottom: 35px;
+}
+
+/* ── FORMULAIRES & ENTRÉES (INPUTS) ─────────────────── */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.form-group input, .input-id-client, .input-designation, .input-qte {
+    width: 100%;
+    padding: 12px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    color: var(--text-dark);
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    border-radius: 0;
+}
+
+.form-group input:focus, .input-designation:focus {
+    outline: none;
+    border-bottom-color: var(--text-dark);
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Zone client style Facture */
+.client-info {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    background-color: #faf9f6;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.client-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent-pink);
+    font-weight: 600;
+}
+
+.input-readonly-nom, .input-readonly-prenom {
+    border: none !important;
+    font-weight: 600;
+    background: transparent;
+}
+
+/* ── TABLEAUX RAFFINÉS ──────────────────────────────── */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #faf9f6;
+    color: var(--text-dark);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+    color: var(--text-body);
+}
+
+tr:hover td {
+    background-color: #fbfcfc;
+}
+
+/* ── BOUTONS ACCENTS ────────────────────────────────── */
+.btn-submit, .btn-index, .btn-save {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--accent-dark);
+    color: #ffffff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border-radius: 2px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-submit:hover, .btn-index:hover, .btn-save:hover {
+    opacity: 0.9;
+}
+
+.btn-save {
+    background-color: var(--accent-pink);
+    width: auto;
+    padding: 15px 40px;
+    margin: 30px auto 0;
+    display: block;
+}
+
+.btn-container-index {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-login {
+    background-color: var(--accent-dark);
+}
+
+.btn-register {
+    background-color: transparent;
+    color: var(--text-dark);
+    border: 1px solid var(--text-dark);
+}
+
+.btn-retour, .btn-cancel {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--text-muted);
+    padding-bottom: 3px;
+}
+
+.btn-nouvelle-vente {
+    text-decoration: none;
+    background-color: var(--text-dark);
+    color: white;
+    padding: 10px 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ── INFOS TOTAUX, ALERTES ET FOOTER ────────────────── */
+.total-zone {
+    float: right;
+    width: 300px;
+    margin-top: 25px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.total-ttc {
+    border-top: 2px solid var(--text-dark);
+    padding-top: 15px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    justify-content: space-between;
+}
+
+.badge-montant {
+    background-color: #e3f9eb;
+    color: #1b723a;
+    padding: 3px 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.error-msg {
+    background-color: #fdf3f5;
+    color: var(--accent-pink);
+    border: 1px solid #f9dbe4;
+    padding: 12px;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.retour-lien-bloc {
+    text-align: center;
+    margin-top: 30px;
+}
+.retour {
+    color: var(--text-dark);
+    text-decoration: none;
+    font-size: 13px;
+    border-bottom: 1px solid var(--text-dark);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.logout-btn {
+    color: var(--text-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--text-dark);
+}
